@@ -1,77 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Munkherdene</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!--
-<video class="bg-video" autoplay muted loop playsinline preload="metadata">
-  <source src="Background.mp4" type="video/mp4">
-</video>
--->
+  <!-- Background video (асаах бол comment-оо аваарай) -->
+  <!--
+  <video class="bg-video" autoplay muted loop playsinline preload="metadata">
+    <source src="Background.mp4" type="video/mp4" />
+  </video>
+  -->
 
   <!-- Cinematic overlay -->
   <div class="overlay"></div>
 
   <!-- Main card -->
   <main class="card">
-    <img class="avatar" src="avatar.jpeg" alt="Munkherdene">
+    <img class="avatar" src="avatar.jpeg" alt="Munkherdene" />
     <h1>Munkherdene</h1>
     <p class="tagline">Digital • Education • Japan</p>
 
-    <!-- Social icon row (Billie vibe) -->
-    <div class="icons">
+    <!-- Social icon row (Linktree-like) -->
+    <div class="icons" aria-label="Social links">
+      <!-- Instagram -->
       <a class="icon" href="https://www.instagram.com/erdenesmn/" target="_blank" aria-label="Instagram">
-        <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm0 2a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm6.2-2.6a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="5" y="5" width="14" height="14" rx="4"></rect>
+          <circle cx="12" cy="12" r="3.2"></circle>
+          <path d="M16.4 7.6h.01"></path>
+        </svg>
       </a>
 
+      <!-- Facebook -->
       <a class="icon" href="https://www.facebook.com/mueru89/" target="_blank" aria-label="Facebook">
-        <svg viewBox="0 0 24 24"><path d="M13.5 22v-8h3l.5-3H13.5V9.2c0-.9.3-1.6 1.7-1.6H17V5.1c-.3 0-1.4-.1-2.7-.1-2.7 0-4.5 1.6-4.5 4.6V11H7v3h2.8v8h3.7z"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M14 8h2V5h-2c-2.2 0-4 1.8-4 4v3H8v3h2v7h3v-7h2.2l.8-3H13V9c0-.6.4-1 1-1z"></path>
+        </svg>
       </a>
 
+      <!-- Threads (optional) -->
+      <a class="icon" href="https://www.threads.net/erdenesmn" target="_blank" aria-label="Threads">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 3c5 0 9 4 9 9s-4 9-9 9S3 17 3 12 7 3 12 3z"></path>
+          <path d="M8.5 12.5c.2 2.2 1.6 3.6 3.7 3.6 1.8 0 3.3-1 3.3-2.6 0-1.3-1-2.1-2.6-2.1h-2"></path>
+        </svg>
+      </a>
+
+      <!-- Email -->
       <a class="icon" href="mailto:mueru89@gmail.com" aria-label="Email">
-        <svg viewBox="0 0 24 24"><path d="M4 6h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm0 2v.3l8 5 8-5V8H4zm16 10V11l-8 5-8-5v7h16z"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="4" y="7" width="16" height="10" rx="2"></rect>
+          <path d="M4 9l8 5 8-5"></path>
+        </svg>
       </a>
 
+      <!-- Phone -->
       <a class="icon" href="tel:+97699970616" aria-label="Phone">
-        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.5 3 3.6 5 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V21c0 .6-.4 1-1 1C10.1 22 2 13.9 2 3c0-.6.4-1 1-1h4.1c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1l-2.2 2.2z"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6.6 10.8c1.5 3 3.6 5 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V21c0 .6-.4 1-1 1C10.1 22 2 13.9 2 3c0-.6.4-1 1-1h4.1c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1l-2.2 2.2z"></path>
+        </svg>
       </a>
     </div>
 
-    <!-- Main links -->
-    <a class="link" href="tel:+97699970616">
-      <span class="li">📞</span><span>Phone</span>
-    </a>
-    <a class="link" href="mailto:mueru89@gmail.com">
-      <span class="li">✉️</span><span>Email</span>
-    </a>
-    <a class="link" href="https://www.instagram.com/erdenesmn/" target="_blank">
-      <span class="li">⌁</span><span>Instagram</span>
-    </a>
-    <a class="link" href="https://www.facebook.com/mueru89/" target="_blank">
-      <span class="li">f</span><span>Facebook</span>
-    </a>
+    <!-- Main links (Linktree-like buttons) -->
+    <a class="link" href="tel:+97699970616">Phone</a>
+    <a class="link" href="mailto:mueru89@gmail.com">Email</a>
+    <a class="link" href="https://www.instagram.com/erdenesmn/" target="_blank">Instagram</a>
+    <a class="link" href="https://www.facebook.com/mueru89/" target="_blank">Facebook</a>
 
-    <!-- Carousel / highlights -->
-    <div class="carousel">
-      <a class="tile" href="https://www.instagram.com/erdenesmn/" target="_blank">
-        <div class="t-title">Latest</div>
-        <div class="t-sub">Instagram</div>
-      </a>
-      <a class="tile" href="https://www.facebook.com/mueru89/" target="_blank">
-        <div class="t-title">Posts</div>
-        <div class="t-sub">Facebook</div>
-      </a>
-      <a class="tile" href="mailto:mueru89@gmail.com">
-        <div class="t-title">Work</div>
-        <div class="t-sub">Email me</div>
-      </a>
-    </div>
-
+    <!-- (Optional) small footer -->
+    <div class="footer">mueru89.github.io</div>
   </main>
 
 </body>
