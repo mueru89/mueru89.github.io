@@ -32,7 +32,7 @@ body {
 /* Center card */
 .card {
   width: min(420px, calc(100% - 32px));
-  margin: 10vh auto 32px;
+  margin: clamp(8vh, 12vh, 16vh) auto 32px;
   padding: 34px 20px 22px;
   text-align: center;
 
@@ -83,7 +83,8 @@ h1 {
 }
 
 .link:active {
-  transform: translateY(0px);
+  transform: scale(0.985);
+  background: rgba(255,255,255,0.18);
 }
 
 /* Nice touch on very small screens */
