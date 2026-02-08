@@ -9,10 +9,12 @@ body {
   min-height: 100vh;
   color: white;
   overflow-x: hidden;
-  background: #0b0f14; /* solid dark */
+
+  /* Solid dark background (video унтраасан үед) */
+  background: #0b0f14;
 }
 
-/* Background video */
+/* Background video (асаасан үед) */
 .bg-video {
   position: fixed;
   inset: 0;
@@ -29,171 +31,126 @@ body {
   background:
     radial-gradient(1200px 800px at 20% 80%, rgba(0,180,255,0.18), transparent 60%),
     radial-gradient(900px 700px at 90% 20%, rgba(120,0,255,0.16), transparent 55%),
-    rgba(0,0,0,0.55);
+    rgba(0,0,0,0.60);
   z-index: -1;
 }
 
-/* Card */
+/* Card (Linktree-ish) */
 .card {
-  width: min(420px, calc(100% - 32px));
-  margin: clamp(8vh, 12vh, 16vh) auto 32px;
-  padding: 34px 20px 22px;
+  width: min(390px, calc(100% - 28px));
+  margin: clamp(7vh, 10vh, 14vh) auto 28px;
+  padding: 28px 18px 20px;
   text-align: center;
 
-  background: rgba(18,18,18,0.55);
+  background: rgba(12, 14, 18, 0.55);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.14);
   border-radius: 26px;
 }
 
 /* Avatar */
 .avatar {
-  width: 96px;
-  height: 96px;
+  width: 92px;
+  height: 92px;
   border-radius: 999px;
   object-fit: cover;
   margin: 0 auto 14px;
   border: 1px solid rgba(255,255,255,0.25);
 }
 
-/* Title */
+/* Title + tagline */
 h1 {
-  font-size: 1.35rem;
+  font-size: 1.55rem;
   letter-spacing: 0.2px;
+  font-weight: 800;
 }
 
 .tagline {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   opacity: 0.7;
-  margin: 6px 0 12px;
+  margin: 8px 0 14px;
 }
 
-/* Icon row */
+/* Icon row - pure outline icons like Linktree */
 .icons {
   display: flex;
   justify-content: center;
-  gap: 12px;
-  margin-bottom: 18px;
+  gap: 22px;
+  margin: 10px 0 22px;
 }
 
 .icon {
-  width: 42px;
-  height: 42px;
-  display: grid;
-  place-items: center;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.18);
-  background: rgba(255,255,255,0.04);
-  backdrop-filter: blur(10px);
-  transition: transform 0.15s ease, background 0.25s ease, border-color 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  opacity: 0.95;
+  transition: transform 0.15s ease, opacity 0.2s ease;
 }
 
 .icon svg {
-  width: 20px;
-  height: 20px;
-  fill: rgba(255,255,255,0.9);
+  width: 34px;
+  height: 34px;
+  fill: none;
+  stroke: rgba(255,255,255,0.92);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-.icon:hover {
-  background: rgba(255,255,255,0.12);
-  border-color: rgba(255,255,255,0.35);
-  transform: translateY(-1px);
-}
+.icon:hover { transform: translateY(-1px); opacity: 1; }
+.icon:active { transform: scale(0.98); }
 
-/* Link buttons */
+/* Linktree-style buttons */
 .link {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
 
-  margin: 12px 0;
-  padding: 14px 14px;
+  margin: 14px 0;
+  padding: 18px 16px;
 
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.45);
+  border: 2px solid rgba(255,255,255,0.65);
 
   color: rgba(255,255,255,0.95);
   text-decoration: none;
 
-  background: rgba(255,255,255,0.02);
+  background: rgba(0,0,0,0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  font-weight: 650;
+  letter-spacing: 0.2px;
+
   transition: transform 0.15s ease, background 0.25s ease, border-color 0.25s ease;
 }
 
 .link:hover {
-  background: rgba(255,255,255,0.12);
-  border-color: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.92);
   transform: translateY(-1px);
 }
 
 .link:active {
-  transform: scale(0.985);
-  background: rgba(255,255,255,0.18);
+  transform: scale(0.99);
+  background: rgba(255,255,255,0.12);
 }
 
-.li {
-  width: 28px;
-  height: 28px;
-  display: grid;
-  place-items: center;
-  border-radius: 10px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.14);
-  font-weight: 700;
-}
-
-/* Carousel */
-.carousel {
+/* Small footer (optional) */
+.footer {
   margin-top: 18px;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 78%;
-  gap: 12px;
-
-  overflow-x: auto;
-  padding: 6px 2px 2px;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+  font-size: 0.85rem;
+  opacity: 0.55;
 }
 
-.carousel::-webkit-scrollbar {
-  display: none;
-}
-
-.tile {
-  scroll-snap-align: start;
-  padding: 18px 16px;
-  border-radius: 20px;
-  text-decoration: none;
-
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.14);
-  backdrop-filter: blur(12px);
-
-  transition: transform 0.2s ease, background 0.25s ease, border-color 0.25s ease;
-}
-
-.tile:hover {
-  transform: translateY(-1px);
-  background: rgba(255,255,255,0.1);
-  border-color: rgba(255,255,255,0.28);
-}
-
-.t-title {
-  font-weight: 700;
-  font-size: 1.05rem;
-}
-
-.t-sub {
-  margin-top: 6px;
-  opacity: 0.75;
-  font-size: 0.9rem;
-}
-
-/* Small screens */
+/* Very small screens */
 @media (max-width: 360px) {
-  .card { padding: 28px 16px 18px; }
-  .avatar { width: 88px; height: 88px; }
+  .card { padding: 24px 16px 18px; }
+  .avatar { width: 86px; height: 86px; }
+  .icon svg { width: 32px; height: 32px; }
 }
